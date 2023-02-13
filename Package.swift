@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "Kushki",
+    platforms: [.iOS(.v14)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -22,6 +23,8 @@ let package = Package(
         .target(
             name: "Kushki",
             dependencies: ["sift-ios"]),
+        .binaryTarget(name: "ToDoSDK",
+                      path: "Frameworks/CardinalMobile.xcframework"),
         .testTarget(
             name: "KushkiTests",
             dependencies: ["Kushki"]),
