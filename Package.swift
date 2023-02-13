@@ -23,8 +23,9 @@ let package = Package(
         .target(
             name: "Kushki",
             dependencies: ["sift-ios"]),
-        .binaryTarget(name: "ToDoSDK",
-                      path: "Frameworks/CardinalMobile.xcframework"),
+        .binaryTarget(
+            name: "CardinalMobile",
+            path: "Frameworks/CardinalMobile.xcframework"),
         .testTarget(
             name: "KushkiTests",
             dependencies: ["Kushki"]),
